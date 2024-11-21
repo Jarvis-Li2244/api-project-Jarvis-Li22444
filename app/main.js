@@ -7,6 +7,50 @@ const DOMSelectors = {
     container: document.querySelector(".container"),
 }
 
+
+async function FFXI() {
+    try {
+        const promise = await fetch("https://xivapi.com/item?columns=ID,Name,Description,LevelItem,ClassJobCategory.Name")
+        if (promise.status != 200) {
+            throw new Error(promise)
+        } else {
+            const info = await promise.json();
+            allInfo(info.Results)
+        }
+    } catch (error) {
+        alert("No Page Found")
+    }
+}
+
+function allInfo(array) {
+    array.forEach(item => addInfo(item))
+}
+
+function addInfo(stuff) {
+    DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div>${stuff.ClassJobCategory}
+        ${stuff.Description}
+        ${stuff.ID}
+        ${stuff.LevelItem}
+        ${stuff.Name}</div>`
+    )
+};
+
+let all = document.querySelector(".all")
+let id = document.querySelector(".id")
+let rarity = document.querySelector(".rarity")
+let rank = document.querySelector(".rank")
+let price = document.querySelector(".price")
+
+all.addEventListener("click", function() {
+    FFXI();
+    }
+) 
+
+
+
+
 function allButtons() {
     let all = document.querySelector(".all")
     let id = document.querySelector(".id")
