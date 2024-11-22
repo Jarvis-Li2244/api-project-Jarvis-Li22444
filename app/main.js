@@ -5,8 +5,8 @@ const DOMSelectors = {
     body: document.querySelector("body"),
     header: document.querySelector(".header"),
     container: document.querySelector(".container"),
+    all: document.querySelector("#all")
 }
-
 
 async function FFXI() {
     try {
@@ -15,7 +15,7 @@ async function FFXI() {
             throw new Error(promise)
         } else {
             const info = await promise.json();
-            allInfo(info.Results)
+            console.log(info.Results)
         }
     } catch (error) {
         alert("No Page Found")
@@ -37,13 +37,7 @@ function addInfo(stuff) {
     )
 };
 
-let all = document.querySelector(".all")
-let id = document.querySelector(".id")
-let rarity = document.querySelector(".rarity")
-let rank = document.querySelector(".rank")
-let price = document.querySelector(".price")
-
-all.addEventListener("click", function() {
+DOMSelectors.all.addEventListener("click", function(event) {
     FFXI();
     }
 ) 

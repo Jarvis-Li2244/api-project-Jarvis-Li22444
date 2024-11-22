@@ -8,18 +8,311 @@
   </head>
   <body>
     <div>
-      <h1>Thing</h1>
-      <div class="header-button">
-          <button class="all">All</button>
-          <button class="id">Sort by ID</button>
-          <button class="rarity">Sort by Rarity</button>
-          <button class="rank">Sort by Rank</button>
-          <button class="price">Sort by Price</button>
+      <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex shrink-0 items-center">
+                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <button class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page" id="all">All Results</button>
+                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="description">Item Description</button>
+                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="id">Item ID</button>
+                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="levelitem">Item Level</button>
+                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="name">Item Name</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="overflow-x-auto">
+        <table class="table table-xs">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>company</th>
+              <th>location</th>
+              <th>Last Login</th>
+              <th>Favorite Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1</th>
+              <td>Cy Ganderton</td>
+              <td>Quality Control Specialist</td>
+              <td>Littel, Schaden and Vandervort</td>
+              <td>Canada</td>
+              <td>12/16/2020</td>
+              <td>Blue</td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td>Hart Hagerty</td>
+              <td>Desktop Support Technician</td>
+              <td>Zemlak, Daniel and Leannon</td>
+              <td>United States</td>
+              <td>12/5/2020</td>
+              <td>Purple</td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td>Brice Swyre</td>
+              <td>Tax Accountant</td>
+              <td>Carroll Group</td>
+              <td>China</td>
+              <td>8/15/2020</td>
+              <td>Red</td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td>Marjy Ferencz</td>
+              <td>Office Assistant I</td>
+              <td>Rowe-Schoen</td>
+              <td>Russia</td>
+              <td>3/25/2021</td>
+              <td>Crimson</td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td>Yancy Tear</td>
+              <td>Community Outreach Specialist</td>
+              <td>Wyman-Ledner</td>
+              <td>Brazil</td>
+              <td>5/22/2020</td>
+              <td>Indigo</td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td>Irma Vasilik</td>
+              <td>Editor</td>
+              <td>Wiza, Bins and Emard</td>
+              <td>Venezuela</td>
+              <td>12/8/2020</td>
+              <td>Purple</td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td>Meghann Durtnal</td>
+              <td>Staff Accountant IV</td>
+              <td>Schuster-Schimmel</td>
+              <td>Philippines</td>
+              <td>2/17/2021</td>
+              <td>Yellow</td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td>Sammy Seston</td>
+              <td>Accountant I</td>
+              <td>O'Hara, Welch and Keebler</td>
+              <td>Indonesia</td>
+              <td>5/23/2020</td>
+              <td>Crimson</td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td>Lesya Tinham</td>
+              <td>Safety Technician IV</td>
+              <td>Turner-Kuhlman</td>
+              <td>Philippines</td>
+              <td>2/21/2021</td>
+              <td>Maroon</td>
+            </tr>
+            <tr>
+              <th>10</th>
+              <td>Zaneta Tewkesbury</td>
+              <td>VP Marketing</td>
+              <td>Sauer LLC</td>
+              <td>Chad</td>
+              <td>6/23/2020</td>
+              <td>Green</td>
+            </tr>
+            <tr>
+              <th>11</th>
+              <td>Andy Tipple</td>
+              <td>Librarian</td>
+              <td>Hilpert Group</td>
+              <td>Poland</td>
+              <td>7/9/2020</td>
+              <td>Indigo</td>
+            </tr>
+            <tr>
+              <th>12</th>
+              <td>Sophi Biles</td>
+              <td>Recruiting Manager</td>
+              <td>Gutmann Inc</td>
+              <td>Indonesia</td>
+              <td>2/12/2021</td>
+              <td>Maroon</td>
+            </tr>
+            <tr>
+              <th>13</th>
+              <td>Florida Garces</td>
+              <td>Web Developer IV</td>
+              <td>Gaylord, Pacocha and Baumbach</td>
+              <td>Poland</td>
+              <td>5/31/2020</td>
+              <td>Purple</td>
+            </tr>
+            <tr>
+              <th>14</th>
+              <td>Maribeth Popping</td>
+              <td>Analyst Programmer</td>
+              <td>Deckow-Pouros</td>
+              <td>Portugal</td>
+              <td>4/27/2021</td>
+              <td>Aquamarine</td>
+            </tr>
+            <tr>
+              <th>15</th>
+              <td>Moritz Dryburgh</td>
+              <td>Dental Hygienist</td>
+              <td>Schiller, Cole and Hackett</td>
+              <td>Sri Lanka</td>
+              <td>8/8/2020</td>
+              <td>Crimson</td>
+            </tr>
+            <tr>
+              <th>16</th>
+              <td>Reid Semiras</td>
+              <td>Teacher</td>
+              <td>Sporer, Sipes and Rogahn</td>
+              <td>Poland</td>
+              <td>7/30/2020</td>
+              <td>Green</td>
+            </tr>
+            <tr>
+              <th>17</th>
+              <td>Alec Lethby</td>
+              <td>Teacher</td>
+              <td>Reichel, Glover and Hamill</td>
+              <td>China</td>
+              <td>2/28/2021</td>
+              <td>Khaki</td>
+            </tr>
+            <tr>
+              <th>18</th>
+              <td>Aland Wilber</td>
+              <td>Quality Control Specialist</td>
+              <td>Kshlerin, Rogahn and Swaniawski</td>
+              <td>Czech Republic</td>
+              <td>9/29/2020</td>
+              <td>Purple</td>
+            </tr>
+            <tr>
+              <th>19</th>
+              <td>Teddie Duerden</td>
+              <td>Staff Accountant III</td>
+              <td>Pouros, Ullrich and Windler</td>
+              <td>France</td>
+              <td>10/27/2020</td>
+              <td>Aquamarine</td>
+            </tr>
+            <tr>
+              <th>20</th>
+              <td>Lorelei Blackstone</td>
+              <td>Data Coordiator</td>
+              <td>Witting, Kutch and Greenfelder</td>
+              <td>Kazakhstan</td>
+              <td>6/3/2020</td>
+              <td>Red</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-    <div class="container">
-        
-    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
+
+<div class="relative" data-hs-combo-box="">
+  <div class="relative">
+    <input class="py-3 ps-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" type="text" role="combobox" aria-expanded="false" value="Argentina" data-hs-combo-box-input="">
+    <div class="absolute top-1/2 end-3 -translate-y-1/2" aria-expanded="false" data-hs-combo-box-toggle="">
+      <svg class="shrink-0 size-3.5 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m7 15 5 5 5-5"></path>
+        <path d="m7 9 5-5 5 5"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="absolute z-50 w-full max-h-72 p-1 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700" style="display: none;" data-hs-combo-box-output="">
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="0" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="Argentina" data-hs-combo-box-value="">Argentina</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="1" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="Brazil" data-hs-combo-box-value="">Brazil</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="2" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="China" data-hs-combo-box-value="">China</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="USA" data-hs-combo-box-value="">USA</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="Italy" data-hs-combo-box-value="">Italy</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+    <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
+      <div class="flex justify-between items-center w-full">
+        <span data-hs-combo-box-search-text="France" data-hs-combo-box-value="">France</span>
+        <span class="hidden hs-combo-box-selected:block">
+          <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
