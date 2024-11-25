@@ -5,7 +5,8 @@ const DOMSelectors = {
     body: document.querySelector("body"),
     header: document.querySelector(".header"),
     container: document.querySelector(".container"),
-    all: document.querySelector("#all")
+    all: document.querySelector("#all"),
+    tbody: document.querySelector("tbody")
 }
 
 async function FFXI() {
@@ -15,7 +16,7 @@ async function FFXI() {
             throw new Error(promise)
         } else {
             const info = await promise.json();
-            console.log(info.Results)
+            allInfo(info.Results)
         }
     } catch (error) {
         alert("No Page Found")
@@ -27,13 +28,14 @@ function allInfo(array) {
 }
 
 function addInfo(stuff) {
-    DOMSelectors.container.insertAdjacentHTML(
+    DOMSelectors.tbody.insertAdjacentHTML(
         "beforeend",
-        `<div>${stuff.ClassJobCategory}
-        ${stuff.Description}
-        ${stuff.ID}
-        ${stuff.LevelItem}
-        ${stuff.Name}</div>`
+        `<tr>
+        <td>${stuff.ID}</td>
+        <td>${stuff.Name}</td>
+        <td>${stuff.Description}</td>
+        <td>${stuff.LevelItem}</td>
+        </tr>`
     )
 };
 
