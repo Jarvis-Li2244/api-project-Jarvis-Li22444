@@ -1,5 +1,6 @@
 import "./style.css";
 
+document.addEventListener('DOMContentLoaded', () => {
 const DOMSelectors = {
     html: document.querySelector("html"),
     body: document.querySelector("body"),
@@ -50,3 +51,6 @@ DOMSelectors.all.addEventListener("click", function(event) {
     FFXI();
     }
 ) 
+
+
+});

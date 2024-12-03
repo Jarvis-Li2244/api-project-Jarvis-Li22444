@@ -13,15 +13,25 @@
           <h1 class="text-center text-[5vw] text-orange-600">FFXIV Spells</h1>
         </div> 
         <div class="w-full mt-1 mb-1 p-4 flex items-center justify-evenly bg-gray-800 h-[6vw]">
-          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded" id="all">Button 1</button>
-          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded">Button 2</button>
-          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded">Button 3</button>
+          <input type="text" id="name-search" placeholder="Spell Name..." class="input input-bordered max-w-xs text-[1.25vw] w-[12vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm hover:bg-gray-100" />
+
+          <form class="max-w-sm">
+            <input type="number" id="number-input" aria-describedby="helper-text-explanation" min="1" max="5" class="text-[1.25vw] w-[12vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm hover:bg-gray-100" placeholder="" value="1" required />
+          </form>
+
           <select class="text-[1.25vw] w-[12vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm hover:bg-gray-100">
-            <option value="">All Aspects</option>
-            <option value="option1">No Aspect</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="optionA1">All Types</option>
+            <option value="optionA2">Magic</option>
+            <option value="optionA3">Physical</option>
           </select>
+          
+          <select class="text-[1.25vw] w-[12vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm hover:bg-gray-100">
+            <option value="optionB1">All Aspects</option>
+            <option value="optionB2">No Aspect</option>
+            <option value="optionB3">Option 2</option>
+            <option value="optionB4">Option 3</option>
+          </select>
+        
         </div>
       </header>
     
@@ -32,7 +42,20 @@
             <img src="path/to/image2.jpg" alt="Card Image 2" class="w-full h-full object-cover">
           </div>
           <h2 class="text-[0.75vw] mb-1 text-orange-600">Rank 2</h2>
-          <p class="mt-2 text-[1vw]">Requirement text or description goes here.</p>
+
+          <button class="btn" onclick="my_modal_1.showModal()">Learn More</button>
+
+          <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+              <p class="py-4 text-[1vw] text-orange-600">Spell Description</p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn text-[1vw] text-orange-600">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+
           <h2 class="text-[0.75vw] text-orange-600">Type 2</h2>
           <h2 class="text-[0.75vw] text-orange-600">Aspect 2</h2>
           <h2 class="text-[2vw] my-4 text-orange-600">ID 2</h2>
