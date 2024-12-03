@@ -6,137 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
-    <div>
-      <nav class="bg-gray-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div class="relative flex h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-                <span class="absolute -inset-0.5"></span>
-                <span class="sr-only">Open main menu</span>
-                <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-                <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex shrink-0 items-center">
-                <img class="h-8 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
-              </div>
-              <div class="hidden sm:ml-6 sm:block">
-                <div class="flex space-x-4">
-                  <button class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page" id="all">All Results</button>
-                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="id">Item ID</button>
-                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="name">Item Name</button>
-                  <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" id="description">Item Description</button>
-                </div>
-              </div>
-            </div>
-          </div>
+  <body class="bg-gray-700 text-orange-600">
+    
+      <header class="w-full bg-black fixed top-0 left-0 max-w-{100vw}">
+        <div class="w-full bg-gray-700 h-[8vw]">
+          <h1 class="text-center text-[5vw] text-orange-600">FFXIV Spells</h1>
+        </div> 
+        <div class="w-full mt-1 mb-1 p-4 flex items-center justify-evenly bg-gray-800 h-[6vw]">
+          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded" id="all">Button 1</button>
+          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded">Button 2</button>
+          <button class="text-[1.25vw] w-[8vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded">Button 3</button>
+          <select class="text-[1.25vw] w-[12vw] h-[4vw] px-[1vw] py-[1vw] text-orange-600 bg-gray-600 border rounded focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 shadow-sm hover:bg-gray-100">
+            <option value="">All Aspects</option>
+            <option value="option1">No Aspect</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
         </div>
-      </nav>
-
-        <div class="flex flex-col">
-          <div class="-m-1.5 overflow-x-auto">
-            <div class="p-1.5 min-w-full inline-block align-middle">
-              <div class="border rounded-lg shadow overflow-hidden dark:border-neutral-700 dark:shadow-gray-900">
-                <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-                  <thead class="bg-gray-50 dark:bg-neutral-700">
-                    <tr>
-                      <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">Item Name</th>
-                      <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">Item Description</th>
-                      <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">Item ID</th>
-                      <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase dark:text-neutral-400">Required Level</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
-                    
-                  </tbody>
-                </table>
-              </div>
-            </div>
+      </header>
+    
+      <div class="container flex flex-wrap justify-center items-center w-full h-full pt-[16vw]">
+        <div class="w-1/4 h-[33vw] m-4 px-2 flex flex-col justify-evenly items-center border border-gray-700 rounded-3xl bg-gray-800 text-center">
+          <h2 class="text-[3vw] my-3 text-orange-600">Card Title 2</h2>
+          <div class="w-3/5 h-1/3 border border-gray-700 rounded-2xl overflow-hidden">
+            <img src="path/to/image2.jpg" alt="Card Image 2" class="w-full h-full object-cover">
           </div>
+          <h2 class="text-[0.75vw] mb-1 text-orange-600">Rank 2</h2>
+          <p class="mt-2 text-[1vw]">Requirement text or description goes here.</p>
+          <h2 class="text-[0.75vw] text-orange-600">Type 2</h2>
+          <h2 class="text-[0.75vw] text-orange-600">Aspect 2</h2>
+          <h2 class="text-[2vw] my-4 text-orange-600">ID 2</h2>
         </div>
-
-        <div class="relative" data-hs-combo-box="">
-          <div class="relative">
-            <input class="py-3 ps-4 pe-9 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" type="text" role="combobox" aria-expanded="false" value="Argentina" data-hs-combo-box-input="">
-            <div class="absolute top-1/2 end-3 -translate-y-1/2" aria-expanded="false" data-hs-combo-box-toggle="">
-              <svg class="shrink-0 size-3.5 text-gray-500 dark:text-neutral-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m7 15 5 5 5-5"></path>
-                <path d="m7 9 5-5 5 5"></path>
-              </svg>
-            </div>
-          </div>
-          <div class="absolute z-50 w-full max-h-72 p-1 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700" style="display: none;" data-hs-combo-box-output="">
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="0" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="Argentina" data-hs-combo-box-value="">Argentina</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="1" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="Brazil" data-hs-combo-box-value="">Brazil</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="2" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="China" data-hs-combo-box-value="">China</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="USA" data-hs-combo-box-value="">USA</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="Italy" data-hs-combo-box-value="">Italy</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <div class="cursor-pointer py-2 px-4 w-full text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800" tabindex="3" data-hs-combo-box-output-item="">
-              <div class="flex justify-between items-center w-full">
-                <span data-hs-combo-box-search-text="France" data-hs-combo-box-value="">France</span>
-                <span class="hidden hs-combo-box-selected:block">
-                  <svg class="shrink-0 size-3.5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20 6 9 17l-5-5"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    
       </div>
-    <script type="module" src="/main.js"></script>
+    
   </body>
+  <script type="module" src="/main.js"></script>
 </html>
+
