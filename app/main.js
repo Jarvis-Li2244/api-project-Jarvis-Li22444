@@ -5,52 +5,89 @@ const DOMSelectors = {
     html: document.querySelector("html"),
     body: document.querySelector("body"),
     header: document.querySelector(".header"),
-    container: document.querySelector(".container"),
-    all: document.querySelector("#all"),
-    tbody: document.querySelector("tbody")
+    box: document.querySelector(".box"),
 }
 
-async function FFXI() {
+const name_Input = document.getElementById("nameI")
+const rank_Input = document.getElementById("numberI")
+const type_Select = document.getElementById("typeS")
+const aspect_Select = document.getElementById("aspectS")
+
+async function FFXIV() {
     try {
         const promise = await fetch("https://ffxivcollect.com/api/spells")
         if (promise.status != 200) {
             throw new Error(promise)
         } else {
             const info = await promise.json();
-            console.log(info.results[1]["aspect"]["name"]);
-            
-            allInfo(info.results)
+            allInfo(
+                info.results
+                .filter(spell => rank_Input.value == "0" || spell.rank == rank_Input.value)
+                .filter(spell => type_Select.value.toLowerCase() == "all types" || spell.type["name"].toLowerCase() == type_Select.value.toLowerCase())
+                .filter(spell => aspect_Select.value.toLowerCase() == "all aspects" || spell.aspect["name"].toLowerCase().includes(aspect_Select.value.toLowerCase()))
+                .filter(spell => name_Input.value == '' || spell.name.toLowerCase().includes(name_Input.value.toLowerCase()))
+            , info.results)
         }
     } catch (error) {
         alert("No Page Found")
     }
 }
 
-function allInfo(array) {
-    array.forEach(item => addInfo(item))
+function allInfo(array, info) {
+    DOMSelectors.box.innerHTML = " "
+    for(let i = 1; i <= info.length; i++) {
+        for(let j = 0; j < array.length; j++) {
+            if(array[j]["id"] == i) {
+                addInfo(array[j]);
+                break
+            }
+        }
+    }
 }
 
-function addInfo(stuff) {
-    DOMSelectors.container.insertAdjacentHTML(
+function addInfo(spell) {
+    DOMSelectors.box.insertAdjacentHTML(
         "beforeend",
         `<div class="w-1/4 h-[33vw] m-4 px-2 flex flex-col justify-evenly items-center border border-gray-700 rounded-3xl bg-gray-800 text-center">
-          <h2 class="text-[3vw] my-3 text-orange-600">${stuff.name}</h2>
+          <h2 class="text-[3vw] my-3 text-orange-600">${spell.name}</h2>
           <div class="w-3/5 h-1/3 border border-gray-700 rounded-2xl overflow-hidden">
-            <img src="${stuff.icon}" alt="Card Image 2" class="w-full h-full object-cover">
+            <img src="${spell.icon}" alt="Card Image 2" class="w-full h-full object-cover">
           </div>
-          <h2 class="text-[1vw] mb-1 text-orange-600">Rank ${stuff.rank}</h2>
-          <p class="m-2 text-[0.75vw]">${stuff.tooltip}</p>
-          <h2 class="text-[1vw] text-orange-600">Type: ${stuff.type["name"]}</h2>
-          <h2 class="text-[1vw] text-orange-600">Aspect: ${stuff.aspect["name"]}</h2>
-          <h2 class="text-[2vw] my-4 text-orange-600">${stuff.id}</h2>
+          <h2 class="text-[1vw] mb-1 text-orange-600">Rank ${spell.rank}</h2>
+          
+          <h2 class="text-[1vw] text-orange-600">Type: ${spell.type["name"]}</h2>
+          <h2 class="text-[1vw] text-orange-600">Aspect: ${spell.aspect["name"]}</h2>
+          <h2 class="text-[2vw] my-4 text-orange-600">${spell.id}</h2>
+
+          <button class="btn text-[1.25vw] mb-1 text-orange-600" onclick="my_modal_${spell.id}.showModal()">Learn More</button>
+          <dialog id="my_modal_${spell.id}" class="modal w-[40vw] h-[13vw] items-center border rounded-3xl text-center align-items">
+            <div class="modal-box">
+              <p class="p-4">${spell.tooltip}</p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn p-2">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </div>`
     )
 };
 
-DOMSelectors.all.addEventListener("click", function(event) {
-    FFXI();
-    }
-) 
 
+rank_Input.addEventListener("input", function(event) {
+    FFXIV()
+})
+type_Select.addEventListener("change", function(event) {
+    FFXIV()
+})
+aspect_Select.addEventListener("change", function(event) {
+    FFXIV()
+})
+name_Input.addEventListener("input", function(event) {
+    FFXIV()
+})
+
+FFXIV()
 
 });
