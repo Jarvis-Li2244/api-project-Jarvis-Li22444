@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.modal{
+    padding: 2vw;
+    overflow-y: scroll;
+    z-index: 1;
+  }
+  
+  .modal{
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+  
+  .modal::-webkit-scrollbar {
+    display: none;
+  }
