@@ -60,8 +60,9 @@ function addInfo(spell) {
           <h2 class="text-[2vw] my-4 text-orange-600">${spell.id}</h2>
 
           <button class="btn text-[1.25vw] mb-1 text-orange-600" onclick="my_modal_${spell.id}.showModal()">Learn More</button>
-          <dialog id="my_modal_${spell.id}" class="modal w-[40vw] h-[13vw] items-center border rounded-3xl text-center align-items">
+          <dialog id="my_modal_${spell.id}" class="modal w-[30vw] h-[10vw] items-center border rounded-lg text-center align-items">
             <div class="modal-box">
+                <h2 class="text-[3vw] my-4 text-sky-500">${spell.id}</h2>
               <p class="p-4">${spell.tooltip}</p>
               <div class="modal-action">
                 <form method="dialog">
